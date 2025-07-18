@@ -16,7 +16,7 @@
 
 		function yenile(){
 			$(document).ready(function(){
-			$.get("https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22LTCUSDT%22,%22USDTTRY%22]", function(data){
+			$.get("https://www.binance.com/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22LTCUSDT%22,%22USDTTRY%22]", function(data){
 				document.getElementById("crypto").innerHTML = (
 					(data[0]["symbol"].match(/\w+(?=USDT)/)[0]) +" : "+ (Number(data[0]["price"])).toFixed(2) + "<br>" +
 					(data[1]["symbol"].match(/\w+(?=USDT)/)[0]) +" : "+ (Number(data[1]["price"])).toFixed(2) + "<br>" +
